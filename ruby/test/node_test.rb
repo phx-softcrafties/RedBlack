@@ -30,4 +30,26 @@ class TestNode < Test::Unit::TestCase
         node2 = "3"
         assert_not_equal node1, node2
     end
+
+    def test_node_add_right_child
+        node = Node.new 3
+        child = Node.new 5
+        node.addChild child
+        assert_equal child, node.right
+    end
+
+    def test_node_add_right_child
+        node = Node.new 3
+        child = Node.new 1
+        node.addChild child
+        assert_equal child, node.left
+    end
+
+    def test_node_add_stupid_child
+        node = Node.new 3
+        child = "john" 
+        assert_raise Exception do
+          node.addChild child
+        end
+    end
 end

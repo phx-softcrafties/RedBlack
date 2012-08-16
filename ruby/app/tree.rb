@@ -4,4 +4,7 @@ class Tree
     def initialize(node)
         @root = node
     end
+
+    def add(node)
+    end
 end
