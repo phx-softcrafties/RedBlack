@@ -20,12 +20,12 @@ class TestTree < Test::Unit::TestCase
     def test_add_second_node_with_lesser_value
         @tree.add Node.new 1
         expect = Node.new 1
-        assert_equal expect.to_s, @tree.root.right.to_s
+        assert_equal expect.to_s, @tree.root.left.to_s
     end
 
     def test_add_second_node_with_greater_value
         @tree.add Node.new 5
         expect = Node.new 5
-        assert_equal expect.to_s, @tree.root.left.to_s
+        assert_equal expect.to_s, @tree.root.right.to_s
     end
 end
