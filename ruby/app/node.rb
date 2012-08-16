@@ -25,5 +25,10 @@ class Node
            @left = node
        end     
    end
+
+   def to_s
+       "node{data: #{@data}, color: #{@color}}"
+   end
+
 end
 
