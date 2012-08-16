@@ -12,7 +12,7 @@ class TestTree < Test::Unit::TestCase
         tree = create_tree
 
         expect = Node.new 3
-        assert_equal tree.root, expect
+        assert_equal expect, tree.root
     end 
 
     def test_add_second_node
@@ -20,6 +20,6 @@ class TestTree < Test::Unit::TestCase
         tree.add Node.new 5
 
         expect = Node.new 5
-        assert_equal tree.root.right, expect
+        assert_equal expect, tree.root.right
     end
 end
